@@ -22,7 +22,7 @@
             @else
                 <a href="{{ route('login') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Login') }}</a>
                 @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Register') }}</a>
+                    <a href="{{ route('register') }}" class="no-underline ring hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Register') }}</a>
                 @endif
             @endauth
         </div>
@@ -36,7 +36,7 @@
                 </h1>
                 <ul class="flex flex-col space-y-2 sm:flex-row sm:flex-wrap sm:space-x-8 sm:space-y-0">
                     <li>
-                        <a href="https://laravel.com/docs" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Documentation">Documentation</a>
+                        <a href="https://laravel.com/docs" class="no-underline text-pink-500 hover:underline text-sm font-normal text-teal-800 uppercase" title="Documentation">Documentation</a>
                     </li>
                     <li>
                         <a href="https://laracasts.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Laracasts">Laracasts</a>
