@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCommissionsTable extends Migration
+class CreateCommissionsTiersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateCommissionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('commissions', function (Blueprint $table) {
+        Schema::create('commissions_tiers', function (Blueprint $table) {
             $table->id("com_id");
-            $table->string("com_rate");
-            $table->string("target");
-            $table->string("accu_total");
+            $table->float("com_rate");
+            $table->integer("target");
             $table->timestamps();
         });
     }

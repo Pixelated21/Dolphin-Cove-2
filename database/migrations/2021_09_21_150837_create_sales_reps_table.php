@@ -15,7 +15,8 @@ class CreateSalesRepsTable extends Migration
     {
         Schema::create('sales_reps', function (Blueprint $table) {
             $table->id("sales_rep_id");
-            $table->foreignId("com_id")->constrained("commissions","com_id");
+            $table->foreignId("user_id")->constrained("users","user_id")->cascadeOnUpdate()->cascadeOnUpdate();
+            $table->foreignId("com_id")->constrained("commissions_tiers","com_id")->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }

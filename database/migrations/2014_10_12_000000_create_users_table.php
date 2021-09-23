@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->id("user_id");
             $table->string('email');
             $table->string('password');
-            $table->string('acc_type');
+            $table->string('acc_type')->default(0);
             $table->timestamps();
         });
     }

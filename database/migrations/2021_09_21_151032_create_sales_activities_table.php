@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSalesTable extends Migration
+class CreateSalesActivitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateSalesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sales', function (Blueprint $table) {
+        Schema::create('sales_activities', function (Blueprint $table) {
             $table->id("sales_id");
-            $table->foreignId("sales_rep_id")->constrained("sales_reps","sales_rep_id");
-            $table->string("sale_amt");
+            $table->foreignId("sales_rep_id")->constrained("sales_reps","sales_rep_id")->cascadeOnUpdate()->cascadeOnUpdate();
+            $table->foreignId("week_id")->constrained("weekly","week_id")->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }
