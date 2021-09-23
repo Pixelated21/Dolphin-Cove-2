@@ -14,4 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get("/",[Homepage::class,"index"]);
+
+Route::get('/', 'App\Http\Controllers\loginController@login');
+Route::get('admindashboard', 'App\Http\Controllers\adminController@adminDashboard');
+Route::get('salesrepdashboard', 'App\Http\Controllers\salesRepController@salesRepDashboard');
